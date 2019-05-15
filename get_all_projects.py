@@ -11,6 +11,13 @@ if os.path.exists('all_project.csv'):
 # Initial value
 has_projects = True
 start_index = 1
+title_list = ["Project Name", "Project ID", "Project Status", "Task URL"]
+
+"""
+with open('all_project.csv', 'a') as csv_file:
+    writer = csv.writer(csv_file)
+    writer.writerow(title_list)
+"""
 
 while has_projects:
     url = "https://projectsapi.zoho.com/restapi/portal/polarongr/projects/"

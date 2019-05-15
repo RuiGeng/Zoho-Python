@@ -25,6 +25,7 @@ if os.path.exists('all_project.csv'):
     with open('all_project.csv', 'r') as csv_file:
         reader = csv.reader(csv_file)
         for row in reader:
+            time.sleep(2)
             task_url = row[3]
             reqUrl = task_url + "?" + query_string
             try:
@@ -53,13 +54,10 @@ if os.path.exists('all_project.csv'):
                             for o in t['details'].get('owners'):
                                 if 'id' in o:
                                     ownerid_list.append(o.get('id'))
-                        print(ownerid_list)
-                        print(len(ownerid_list))
                         owner_id = ','.join(ownerid_list)
                         row_list.append(owner_id)
                         with open('all_task.csv', 'a') as csv_file:
                             writer = csv.writer(csv_file)
                             writer.writerow(row_list)
-                            time.sleep(2)
             except urllib.error.HTTPError as error:
                 print("Get Error Code: " + str(error.code))
