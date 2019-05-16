@@ -25,7 +25,8 @@ if os.path.exists('all_project.csv'):
     with open('all_project.csv', 'r') as csv_file:
         reader = csv.reader(csv_file)
         for row in reader:
-            time.sleep(2)
+            print(row[0])
+            time.sleep(5)
             task_url = row[3]
             reqUrl = task_url + "?" + query_string
             try:
