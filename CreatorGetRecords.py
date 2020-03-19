@@ -12,7 +12,7 @@ if os.path.exists('Records.csv'):
 # https://creator.zoho.com/api/<format>/<applicationLinkName>/view/<viewLinkName>
 
 url = "https://creator.zoho.com/api/csv/accounting-space/view/CRM_Info_Report"
-authtoken = "abcdefg"
+authtoken = "411ec6b991ed77bb876b2c78dc2659e5"
 scope = "creatorapi"
 ownername = "polaronsolartech"
 
